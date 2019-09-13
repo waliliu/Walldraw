@@ -14,7 +14,7 @@
 //调试标志
 
 
-#define STEPS_PER_TURN  (2048)  //步进电机一周步长 512步转360度
+#define STEPS_PER_TURN  (2048)  //步进电机一周步长 2048步转360度
 #define SPOOL_DIAMETER  (35)    //线轴直径mm
 #define SPOOL_CIRC      (SPOOL_DIAMETER * 3.1416)  //线轴周长 35*3.14=109.956
 #define TPS             (SPOOL_CIRC / STEPS_PER_TURN)  //步进电机步距，最小分辨率 每步线绳被拉动的距离  0.0268447265625mm
