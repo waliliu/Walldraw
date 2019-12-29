@@ -34,22 +34,22 @@
 static long laststep1, laststep2; //当前线长度 记录笔位置
 
 
-#define X_SEPARATION  560           //两绳上方的水平距离mm 
+#define X_SEPARATION  507           //两绳上方的水平距离mm 
 #define LIMXMAX       ( X_SEPARATION*0.5)   //x轴最大值  0位在画板中心
 #define LIMXMIN       (-X_SEPARATION*0.5)   //x轴最小值
 
 /* 垂直距离的参数： 正值在画板下放，理论上只要画板够大可以无限大，负值区域在笔（开机前）的上方 
 详细介绍见说明文档 https://github.com/shihaipeng03/Walldraw
 */
-#define LIMYMAX         (-300)   //y轴最大值 画板最下方
-#define LIMYMIN         (425)    //y轴最小值 画板最上方  左右两线的固定点到笔的垂直距离，尽量测量摆放准确，误差过大会有畸变
+#define LIMYMAX         (-430)   //y轴最大值 画板最下方
+#define LIMYMIN         (430)    //y轴最小值 画板最上方  左右两线的固定点到笔的垂直距离，尽量测量摆放准确，误差过大会有畸变
                 //值缩小画图变瘦长，值加大画图变矮胖 
 
 
 
 //抬笔舵机的角度参数  具体数值要看摆臂的安放位置，需要调节
-#define PEN_UP_ANGLE    60  //抬笔
-#define PEN_DOWN_ANGLE  95  //落笔
+#define PEN_UP_ANGLE    70  //抬笔
+#define PEN_DOWN_ANGLE  85  //落笔
 //上面是需要调节的参数 =============================================
 
 
