@@ -416,6 +416,7 @@ void drawfile( String filename)
 {
 
   String rd="";
+  int line=0;
   char rr=0;
   
 
@@ -427,12 +428,16 @@ void drawfile( String filename)
       rr=myFile.read();
       
       if (rr == char(10)) 
-        {
-          Serial.println("go nc:");
+       {
+          line++;
+          Serial.print("Run nc #");
+          Serial.print(line);
+          Serial.println(" : "+rd);
           nc(rd);
           rd="";
         }
-       rd+=rr;
+       else
+         rd+=rr;
         
     }
     
