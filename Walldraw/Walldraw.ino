@@ -483,7 +483,7 @@ void setup() {
 
 
 void loop() {
-
+ //注意卡上的文件名要和程序一致。！！！！！
   drawfile("1.nc");  //1.nc 是Gcode代码的文件名 ，需要将g代码保存在sd卡上。
   while(1);
 }
