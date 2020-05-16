@@ -2,7 +2,7 @@
 //https://somebodys.taobao.com/
 //有名称的店铺
 
-
+//本程序可以自动画一些几何图形和函数曲线，用来测试主机运行状态。
 
 #include <TinyStepper_28BYJ_48.h>
 #include <Servo.h>
