@@ -1,3 +1,16 @@
+//淘宝『有名称的店铺』https://somebodys.taobao.com/
+//更新日期 2019/06/04
+//Wall Drawing Machine 墙画机 程序
+//本程序对应商品 https://item.taobao.com/item.htm?id=597354643355
+
+//web版程序连接：
+//Github版链接：  https://github.com/shihaipeng03/Walldraw
+
+
+//墙画机无舵机测试程序。本程序只测试2只步进电机，画曲线花纹，修改参数可以改变花纹尺寸和样式。
+
+
+
 #include <AccelStepper.h>
 //此lib库文件在程序包中，需要先复制到arduiino的\libraries文件夹下。
 //方法1： 复制到 我的文档\Arduino\libraries 中
@@ -19,6 +32,10 @@
 #define motorPin8  10    //  28BYJ48 pin 4 接 10#
 
 
+#define stp1 790		//
+#define stp2 1226		//修改此参数，可以改变图案的尺寸和样式，数值越大图案越大，差距越大越复杂。达到2数的最小公倍数后图案封闭。
+
+
 AccelStepper stepper1(HALFSTEP, motorPin1, motorPin3, motorPin2, motorPin4);
 AccelStepper stepper2(HALFSTEP, motorPin5, motorPin7, motorPin6, motorPin8);
 
@@ -30,13 +47,13 @@ void setup()
   stepper1.setSpeed(256);           //速度
   //视 FULLSTEP 或 HALFSTEP， 1024 或 512 步进电机转一周   
   //设置电机1的旋转步数 可调节（数字越大，图形尺寸越大）
-  stepper1.moveTo(790);
+  stepper1.moveTo(stp1);
   
   stepper2.setMaxSpeed(1000.0);
   stepper2.setAcceleration(256.0);
   stepper2.setSpeed(256);
   //同stepper1
-  stepper2.moveTo(1226);  
+  stepper2.moveTo(stp2);  
   
 }
 void loop()  
@@ -50,3 +67,5 @@ void loop()
   stepper2.run();
     
 }
+
+//此程序无限循环，不会结束。

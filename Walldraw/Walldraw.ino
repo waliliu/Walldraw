@@ -1,6 +1,10 @@
-//== Wall Drawing Machine https://github.com/shihaipeng03/Walldraw ==
-//https://somebodys.taobao.com/
-//有名称的店铺
+//淘宝『有名称的店铺』https://somebodys.taobao.com/
+//更新日期 2020/06/04
+//Wall Drawing Machine 墙画机 程序
+//本程序对应商品 https://item.taobao.com/item.htm?id=597354643355
+
+//web版程序连接：
+//Github版链接：  https://github.com/shihaipeng03/Walldraw
 
 //本程序是从SD卡读取Gcode文件绘图。需要读卡器模块支持。
 //其中一些参数需要测量安装距离后修改，直接上传不能正常工作。修改方法见说明文档。
@@ -22,7 +26,7 @@
 #define STEPS_PER_TURN  (2048)  //步进电机一周步长 2048步转360度
 #define SPOOL_DIAMETER  (35)    //线轴直径mm
 #define SPOOL_CIRC      (SPOOL_DIAMETER * 3.1416)  //线轴周长 35*3.14=109.956
-#define TPS             (SPOOL_CIRC / STEPS_PER_TURN)  //步进电机步距，最小分辨率 每步线绳被拉动的距离  0.0268447265625mm
+#define TPS             (SPOOL_CIRC / STEPS_PER_TURN)  //步进电机步距，最小分辨率 每步线绳被拉动的距离  0.053689mm
 
 
 
